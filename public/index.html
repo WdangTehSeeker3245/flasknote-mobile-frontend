@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flasknote App</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/materialize/css/materialize.css">
+    <style>
+        body {
+            background-color:rgb(39, 122, 122);
+        }
+        .mylogo {
+            margin-left : 20px;
+            font-size: 30px;
+        }
+        .addnotebutton {
+            position: absolute;
+            bottom:25;
+            right:25;
+        }
+        .searchbar {
+            margin-top: 20px;
+            width:420px;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            padding: 5px 5px 0px 5px;
+        }
+        .searchicon{
+            cursor: pointer;
+        }
+
+        @media (max-width:526px) {
+            .mylogo {
+                margin-left : 20px;
+                font-size: 20px;
+            }
+            .addnotebutton {
+                position: absolute;
+                bottom:15;
+                right:15;
+            }
+            .searchbar {
+                width:100%;    
+            }
+        }
+    </style>
+</head>
+<body >
+    <script src="./js/jquery-3.6.3.js"></script>
+    <script src="./js/materialize/js/materialize.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+    </script>
+
+    <nav>
+        <div class="nav-wrapper teal lighten-2">
+          <a href="#" class="mylogo">Flasknote App</a>
+          <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+            <i class="material-icons">menu</i>
+          </a>
+
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">Backup</a></li>
+          </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-nav">
+        <li><a href="#">Backup</a></li>
+    </ul>
+    <div class="row searchbar red">
+        <div class="col s12">
+          <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons white-text prefix">search</i>
+                    <input type="text" id="searchnote" class="autocomplete">
+                    <label for="searchnote">Search Here</label>
+                    <center>
+                        <button type="submit" class="waves-effect waves-light btn" style="margin-top:5px;">Submit</button>
+                    </center>
+                </div>
+          </div>
+        </div>
+    </div>
+
+    <a href="addnote.html" class="btn-floating btn-large waves-effect waves-light teal lighten-2 addnotebutton"><i class="material-icons">add</i></a>
+
+    
+</body>
+</html>
